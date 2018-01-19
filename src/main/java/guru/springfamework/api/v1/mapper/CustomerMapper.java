@@ -1,0 +1,20 @@
+package guru.springfamework.api.v1.mapper;
+
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
+
+import guru.springfamework.api.v1.model.CustomerDTO;
+import guru.springfamework.domain.Customer;
+
+/**
+ * Created by jt on 9/25/17.
+ */
+@Mapper
+public interface CustomerMapper {
+
+    CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
+
+    CustomerDTO customerToCustomerDTO(Customer customer);
+    
+    Customer customerDTOToCustomer(CustomerDTO customerDTO);
+}

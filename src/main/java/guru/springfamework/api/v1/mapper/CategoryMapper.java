@@ -1,9 +1,10 @@
 package guru.springfamework.api.v1.mapper;
 
-import guru.springfamework.api.v1.model.CategoryDTO;
-import guru.springfamework.domain.Category;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
+
+import guru.springfamework.api.v1.model.CategoryDTO;
+import guru.springfamework.domain.Category;
 
 /**
  * Created by jt on 9/25/17.
@@ -12,7 +13,6 @@ import org.mapstruct.factory.Mappers;
 public interface CategoryMapper {
 
     CategoryMapper INSTANCE = Mappers.getMapper(CategoryMapper.class);
-
 
     CategoryDTO categoryToCategoryDTO(Category category);
 }
